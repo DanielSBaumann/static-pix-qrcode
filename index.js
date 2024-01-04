@@ -19,10 +19,12 @@ app.get('/api/v1', (req, res) => {
         nome,
         cidade);
 
+    console.log(`Generated EMV: ${emvPix}`);
+
     res.json(emvPix);
 
 });
 
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+    console.log(`Service runnig on :${port}`);
 });
